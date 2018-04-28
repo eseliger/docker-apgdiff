@@ -1,5 +1,5 @@
 # apgdiff
 
 ```
-docker pull apgdiff:latest
+docker pull eseliger/apgdiff:latest
 ```
