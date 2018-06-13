@@ -1,7 +1,7 @@
-FROM ubuntu:17.10
+FROM java:8
 
 LABEL maintainer="eseliger"
 
-RUN apt-get update && apt-get install --no-install-recommends -y apgdiff && apt-get autoremove -fy && rm -rf /var/lib/apt/lists/*
+COPY apgdiff-2.5.0-SNAPSHOT.jar apgdiff.jar
 
-CMD ["apgdiff"]
+CMD ["java", "-jar", "apgdiff.jar"]
